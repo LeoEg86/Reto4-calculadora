@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Básica</title>
+    <!-- Se referencia el archivo CSS para aplicar los estilos visuales -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- Contenedor principal para la calculadora (Selector de ID) -->
+    <div id="calculadora">
+        
+        <!-- Título principal solicitado en las instrucciones -->
+        <h1>Calculadora Básica</h1>
+
+        <!-- Pantalla de la calculadora -->
+        <!-- Se usa un <input> de tipo texto para mostrar los números y operaciones. -->
+        <!-- El atributo 'readonly' evita que el usuario escriba con el teclado y solo use los botones. -->
+        <input type="text" id="pantalla" readonly value="0">
+
+        <div class="teclado">
+            <!-- Fila 1 -->
+            <!-- Botones de operaciones: Llaman a la función operacion() pasando el símbolo -->
+            <button class="btn-operacion" onclick="operacion('+')">+</button>
+            <button class="btn-operacion" onclick="operacion('-')">-</button>
+            <button class="btn-operacion" onclick="operacion('*')">×</button>
+            <button class="btn-operacion" onclick="operacion('/')">÷</button>
+            
+
+            <!-- Fila 2 -->
+            <!-- Botones numéricos: Llaman a agregarNumero() pasando el número -->
+            <button class="btn-numero" onclick="agregarNumero('6')">6</button>
+            <button class="btn-numero" onclick="agregarNumero('7')">7</button>
+            <button class="btn-numero" onclick="agregarNumero('8')">8</button>
+            <button class="btn-numero" onclick="agregarNumero('9')">9</button>
+
+            <!-- Fila 3 -->
+            <button class="btn-numero" onclick="agregarNumero('5')">5</button>
+            <button class="btn-numero" onclick="agregarNumero('4')">4</button>
+            <button class="btn-numero" onclick="agregarNumero('3')">3</button>
+            <button class="btn-numero" onclick="agregarNumero('2')">2</button>
+            
+
+            <!-- Fila 4 -->
+            <button class="btn-numero" onclick="agregarNumero('1')">1</button>
+            <button class="btn-numero" onclick="agregarNumero('0')">0</button>
+            <!-- Botón de Punto Decimal: Permite hacer operaciones con decimales -->
+            <button class="btn-numero" onclick="agregarNumero('.')">.</button>
+             <!-- Botón "C": Llama a la función limpiar() y usa la clase btn-limpiar para su color -->
+            <button class="btn-limpiar" onclick="limpiar()">C</button>
+
+            <!-- Fila 5 --> 
+            <!-- Botón de Resultado "=": Llama a calcular() y usa la clase btn-igual para resaltar -->
+            <button class="btn-igual" onclick="calcular()">=</button>
+
+        </div>
+    </div>
+
+    <!-- Enlace al archivo Javascript -->
+    <!-- Se coloca al final del <body> para que el HTML cargue primero y el script encuentre los botones listos -->
+    <script src="script.js"></script>
+</body>
+</html>

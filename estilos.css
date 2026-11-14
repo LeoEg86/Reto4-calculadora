@@ -1,0 +1,89 @@
+/* Estilos Generales - Se aplican al cuerpo de la página web */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía */
+    background-color: #f1f5f9; /* Fondo gris claro para la pagina  */
+    margin: 0; /* Quita el margen del navegador */
+    padding: 0;
+    color: #334155; /* Color gris oscuro para el texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centra la calculadora en la pantalla */
+}
+
+/* Estilo Contenedor principal de la calculadora (Selector de ID) */
+#calculadora {
+    background-color: #ffffff; /* Fondo blanco para la calculadora */
+    width: 350px; /* Ancho fijo */
+    margin: 0 auto; /* Centra la calculadora horizontalmente */
+    padding: 20px; /* Espacio interno */
+    border: 2px solid #333333; /* Borde grueso oscuro */
+}
+/* Titulo principal */
+h1 {
+    text-align: center; /* Centra el texto */
+    color: #000080; /* Azul marino clásico  */
+    font-size: 22px; /* Tamaño normal */
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/*Leonardo Egea Rodriguez */
+/* Pantalla de la calculadora (Selector de ID) */
+#pantalla {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 60px;
+    padding: 10px;
+    border: 1px solid #000000; /* Borde negro sencillo  */
+    background-color: #f9f9f9; /* Fondo gris muy clarito */
+    color: #000080; /* Texto azul marino */
+    font-size: 30px; /* Números grandes */
+    text-align: right;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+/* Cuadricula y Botonoes */
+/* Teclado usando CSS Grid para diseñar 4 columnas */
+.teclado {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; /* Separación entre botones */
+}
+
+/* Estilos para TODOS los botones (Selector de Elemento) */
+button {
+    height: 60px;
+    font-size: 20px;
+    border: 1px solid #000000; /* Borde negro sencillo  */
+    background-color: #f9f9f9; /* Fondo gris muy clarito */
+    color: #333333; /* Color gris oscuro */
+    cursor: pointer;
+}
+
+/* Botones de operaciones (+, -, *, /) */
+.btn-operacion {
+    background-color: #cbd5e1; /* Gris oscuro para contraste */
+    color: #000080; /* Azul marino */
+    font-weight: bold;
+}
+
+/* Botón Limpiar (C) */
+.btn-limpiar {
+    background-color: #fca5a5; /* Rojo */
+    color: #7f1d1d;
+    font-weight: bold;
+}
+
+/* Botón Igual (=) */
+.btn-igual {
+    background-color: #000080; /* Azul marino  */
+    color: #ffffff; /* Texto blanco */
+    font-weight: bold;
+    grid-column: span 2; /* Ocupa 2 columnas para completar la fila */
+}
+
+/* Botón Cero (0) */
+.btn-numero[onclick="agregarNumero('0')"] {
+    grid-column: span 2; /* Ocupa 2 columnas */
+}
